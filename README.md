@@ -3,3 +3,23 @@ Me Learning Assembly Notes as Such.
 
 1. [Introduction](#Introduction)
 2. [Hello_World](#Hello_World)
+#Hello World Program-Assembly-x86
+>code...
+>section .data
+>   msg db "hello world", 0x0A ; new line character at the end
+>   len equ $ - msg            ; calculate the length of the string
+>section .text
+>   global _start
+>_start:
+>   mov eax, 4                 ; 4 is the system call number associated with the write operation
+                               ; write (fd , string_address, offset) it is c-style syntax for write system call    
+                               ; the input arguments will be passed on using "ebx" - fd, "ecx" - msg-starting address , "edx" as a offset (length)
+>   mov ebx, 1                 ; fd = stdout 
+>   mov ecx, msg
+>   mov edx, len               ; length of the message
+>   int 0x80                   ; Interrupt call the system call in eax
+
+> ; to exit cleanly 
+>   mov eax, 1 
+>   mov ebx, 0                  ; for exit code 
+>   int 0x80
