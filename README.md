@@ -1,11 +1,12 @@
 ### Assembly_X86
 # Me Learning Assembly Notes as Such.
-
 1. [Introduction](#Introduction)
 2. [Hello_World](#Hello_World)
 
 ## Hello World Program-Assembly-x86
- code...
+
+<pre lang="markdown">
+''' code...
  section .data
    msg db "hello world", 0x0A ; new line character at the end
    len equ $ - msg            ; calculate the length of the string
@@ -20,7 +21,7 @@
    mov edx, len               ; length of the message
    int 0x80                   ; Interrupt call the system call in eax
 
- ; to exit cleanly/ 
-   mov eax, 1 /
+ ; to exit cleanly 
+   mov eax, 1 
    mov ebx, 0                  ; for exit code 
-   int 0x80 /
+   int 0x80 ''' </pre>
