@@ -29,8 +29,8 @@
 ## Compile and Link 
 
 <pre lang="markdown">
-        nasm -f elf32 hello.asm -o hello.o 
-    #this compiles the binary to 32bit
-        ld -m elf_i386 hello.o -o hello 
-    #this linkes the object file to executable
-        ./hello
+nasm -f elf32 hello.asm -o hello.o 
+#this compiles the binary to 32bit
+ld -m elf_i386 hello.o -o hello 
+#this linkes the object file to executable
+./hello
