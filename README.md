@@ -6,7 +6,7 @@
 ## Hello World Program-Assembly-x86
 
 <pre lang="markdown">
-''' code...
+; code...
  section .data
    msg db "hello world", 0x0A ; new line character at the end
    len equ $ - msg            ; calculate the length of the string
@@ -24,4 +24,13 @@
  ; to exit cleanly 
    mov eax, 1 
    mov ebx, 0                  ; for exit code 
-   int 0x80 ''' </pre>
+   int 0x80  </pre>
+
+## Compile and Link 
+
+<pre lang="markdown">
+        nasm -f elf32 hello.asm -o hello.o 
+    #this compiles the binary to 32bit
+        ld -m elf_i386 hello.o -o hello 
+    #this linkes the object file to executable
+        ./hello
