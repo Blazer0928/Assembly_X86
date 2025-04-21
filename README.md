@@ -47,8 +47,9 @@ This is accomplished using,
 4. General-purpose register
 5. Arithmetic and logic unit
 
-since the instructions are stored in memory program counter hold the address to the next instruction to be executed 
--> then passed to instruction Decoder it decodes the instruction(addition, sub, multi, data moving) etc... 
--> data Bus is used to fetch or send data to a specified location 
--> General-purpose registers are high speed registers used for calculations it also have special purpose registers that have so special use case 
--> Arithmetic and logic unit for Arithmetic and logical calculations.
+since the instructions are stored in memory <br>
+-> program counter hold the address to the next instruction to be executed <br>
+-> then passed to instruction Decoder it decodes the instruction(addition, sub, multi, data moving) etc... <br>
+-> data Bus is used to fetch or send data to a specified location <br>
+-> General-purpose registers are high speed registers used for calculations it also have special purpose registers that have so special use case <br>
+-> Arithmetic and logic unit for Arithmetic and logical calculations. <br>
